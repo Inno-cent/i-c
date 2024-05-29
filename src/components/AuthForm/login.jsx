@@ -26,7 +26,22 @@ const Login = () => {
 				value={inputs.password}
 				onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
 			/>
-			
+			{error && (
+				<Alert status='error' fontSize={13} p={2} borderRadius={4}>
+					<AlertIcon fontSize={12} />
+					{error.message}
+				</Alert>
+			)}
+			<Button
+				w={"full"}
+				colorScheme='blue'
+				size={"sm"}
+				fontSize={14}
+				isLoading={loading}
+				onClick={() => login(inputs)}
+			>
+				Log in
+			</Button>
 		</>
 	);
 };
