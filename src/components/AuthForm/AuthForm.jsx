@@ -2,6 +2,7 @@ import React from "react";
 import { Box, VStack, Image, Input } from "@chakra-ui/react";
 
 const AuthForm = () => {
+    const [isLogin, setIsLogin] = useState(true);
   return (
     <div>
       <Box border={"1px solid gray"} borderRadius={4} padding={5}>
